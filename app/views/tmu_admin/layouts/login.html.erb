@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>天幕科技</title>
+  <%= stylesheet_link_tag "tmu_admin/themes/default/easyui" %>
+  <%= stylesheet_link_tag "tmu_admin/themes/icon" %>
+  <%= stylesheet_link_tag "tmu_admin/themes/main" %>
+  <%= javascript_include_tag "application" %>
+  <style type="text/css">
+      table {
+          font-family: "微软雅黑";
+          padding: 0;
+          margin: 0 auto;
+          border-collapse: collapse;
+          margin-top: 20px;
+      }
+
+      td {
+          background: #fff;
+          font-size: 12px;
+          padding: 3px 3px 3px 8px;
+          color: #4f6b72;
+      }
+
+      input {
+          width: 150px;
+          border: 1px solid #ccc;
+          padding: 2px;
+      }
+  </style>
+  <script type="text/javascript">
+
+      var loginDialog;
+      var loginForm;
+
+      $(document).ready(function () {
+
+          loginDialog = $("#loginDialog").dialog({
+              closable: false,
+              cache: false,
+              modal: true,
+              buttons: [
+                  {
+                      text: "登录",
+                      handler: function () {
+                          loginFrom.submit();
+                      }
+                  }
+              ]
+          });
+
+
+          loginFrom = $("#new_tmu_admin_user_session").form({
+              success: function (data) {
+                  loginDialog.dialog("close");
+                  location.reload();
+              }
+          });
+
+      });
+  </script>
+</head>
+<body>
+<div id="loginDialog" title="用户登录" style="width:300px;height:180px;">
+  <%= yield %>
+</div>
+</body>
+</html>

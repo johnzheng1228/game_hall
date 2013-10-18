@@ -1,0 +1,15 @@
+.cs-north { height:60px; background: url(images/header_bg.png); overflow:hidden;}
+.cs-north-bg img{vertical-align:middle;}
+.cs-north-bg{ background-image:url(images/header_3.png);  height:60px; padding-right:10px; text-align:right; line-height:30px;}
+.cs-north-logo{ height:55px; padding-top:5px; background-image:url(images/header_1.png); width:250px; padding-left:10px;  float:left;}
+.logo_img{ width:67px; height:40px; float:left; }
+.logo_word1{ width:170px; height:60px; padding-left:13px; float:left; font-size:14px; line-height:20px; font-weight:bolder; color:#2a6849;}
+.logo_word{ width:170px; height:60px; padding-left:13px; float:left; font-size:16px; line-height:40px; font-weight:bolder; color:#2a6849;}
+.cs-west { width:200px;padding:0px;border-left:1px solid #99BBE8;}
+.cs-south { height:30px;background:url(images/bottom_1.png) repeat-x;padding:0px;text-align:center;}
+.cs-south-img{ height:30px; width:21; padding:0; margin:0; float:right;}
+.cs-south-word{ height:30px; width:auto; padding-right:10px; line-height:30px; float:right; min-width:250px; background-image:url(images/bottom_2.png);}
+a.cs-navi-tab{  height:25px; display:block; text-decoration:none; line-height:25px; color:#25747C;  }
+a.cs-navi-tab:hover{  height:25px; display:block; text-decoration:underline;  line-height:25px;  font-size:13px;}
+.cs-tab-menu { width:120px;}
+.cs-home-remark { padding: 10px; padding-top:5px;}

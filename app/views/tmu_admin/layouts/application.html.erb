@@ -1,0 +1,21 @@
+<html>
+<head>
+	<title>天幕科技</title>
+	<%= stylesheet_link_tag "tmu_admin/themes/default/easyui"%>
+	<%= stylesheet_link_tag "tmu_admin/themes/icon"%>
+	<%= stylesheet_link_tag "tmu_admin/themes/main"%>
+	<%= javascript_include_tag "application" %>
+	<script type="text/javascript">
+	$(function(){
+		$(window).resize(function(){
+			$('#main-layout').layout('resize');
+		});
+	});
+	</script>
+</head>
+<body>
+	<div data-options="region:'center'">
+		<%=yield%>
+	</div>
+</body>
+</html>

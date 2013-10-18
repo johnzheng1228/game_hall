@@ -1,0 +1,37 @@
+<%= form_for @tmu_admin_user do |f| %>
+
+	<div class="tfContainer">
+		<%= f.text_field :login, {:size => 30} %>
+	</div>
+	
+	<div class="tfContainer tfContainerSecond">
+		<%=  f.text_field :name %>
+	</div>
+	
+	<div class="tfContainer">
+		<%=  f.text_field :email %>
+	</div>
+
+	<div class="tfContainer tfContainerSecond">
+		<%= f.select :time_zone, ActiveSupport::TimeZone.us_zones %>
+	</div>
+	
+	<div class="tfContainer">
+		<%= f.select :access_level, [1,2] %>
+	</div>
+
+	<div class="tfContainer">
+		<%= f.password :password%>
+	</div>
+	
+	<div class="tfContainer tfContainerSecond">
+		<%= f.password :password_confirmation%>
+	</div>
+
+	<div class="clearer"></div>
+
+	<p class="submits">
+		<%= form.submit "Add new user", :class => "update" %>
+	</p>
+
+<% end %>

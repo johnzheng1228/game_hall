@@ -1,0 +1,24 @@
+<table id="dg" class="easyui-datagrid" rownumbers="true" url="rooms/data?app=<%=@appid%>" pagination="true" pageList="[20,30,40,50]" pageSize="20" toolbar="#tb">
+  <thead>
+    <tr>
+      <th field='name'>房间名称</th>
+      <th field='backgroup'>背景图片</th>
+      <th field='total_lest'>房间要求</th>
+      <th field='single_lest'>单注要求</th>
+    </tr>
+  </thead>
+</table>
+<div id="tb" style="padding:5px;height:auto">
+  <div style="margin-bottom:5px">
+    <a href="javascript:void(0)" onclick="showDialog('Add Room','rooms/new')" class="easyui-linkbutton" iconCls="icon-add" plain="true"></a>
+    <a href="javascript:void(0)" onclick="showDialog('Update Room','rooms/0/edit')" class="easyui-linkbutton" iconCls="icon-edit" plain="true"></a>
+    <a href="javascript:void(0)" onclick="javascript:showDialog('','');" class="easyui-linkbutton" iconCls="icon-remove" plain="true"></a>
+  </div>
+  <div>
+    <%= form_tag("rooms/search",:method=>"post") do |f| %>
+    <%= select_tag("app", options_for_select(@apps.collect { |app| [app.name, app.id] }, :selected => @appid),:prompt=>"请选择应用") %>
+    <input type="submit" class="easyui-linkbutton" value="查看"/>
+    <% end %>
+  </div>
+</div>
+<div id="dlg" title="My Window" style="text-align: center"></div>

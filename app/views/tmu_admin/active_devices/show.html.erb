@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Device:</strong>
+  <%= @active_device.device %>
+</p>
+
+<p>
+  <strong>Serail:</strong>
+  <%= @active_device.serail %>
+</p>
+
+<%= link_to 'Edit', edit_active_device_path(@active_device) %> |
+<%= link_to 'Back', active_devices_path %>

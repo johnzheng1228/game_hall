@@ -1,0 +1,22 @@
+<table id="dg" class="easyui-datagrid" rownumbers="true" url="apps/data" pagination="true" pageList="[20,30,40,50]" pageSize="20" toolbar="#tb">
+	<thead>
+		<tr>
+			<th field='name'>应用名称</th>
+			<th field='icon'>图标</th>
+			<th field='url'>下载地址</th>
+		</tr>
+	</thead>
+</table>
+<div id="tb" style="padding:5px;height:auto">
+	<div style="margin-bottom:5px">
+		<a href="javascript:void(0)" onclick="showDialog('Add APP','<%=new_tmu_admin_app_path%>')" class="easyui-linkbutton" iconCls="icon-add" plain="true"></a>
+		<a href="javascript:void(0)" onclick="showDialog('Update App','<%=edit_tmu_admin_app_path(nil)%>')" class="easyui-linkbutton" iconCls="icon-edit" plain="true"></a>
+		<a href="javascript:void(0)" onclick="javascript:showDialog('','');" class="easyui-linkbutton" iconCls="icon-remove" plain="true"></a>
+	</div>
+	<div>
+		From: <input class="easyui-datebox" style="width:80px">
+		To: <input class="easyui-datebox" style="width:80px">
+		<a href="#" class="easyui-linkbutton" iconCls="icon-search">Search</a>
+	</div>
+</div>
+<div id="dlg" title="My Window" style="text-align: center"></div>

@@ -1,0 +1,32 @@
+<%= form_for @user_session, :url => tmu_admin_user_session_path do |f| %>
+
+	<% if @user_session.errors.any? %>
+		<div class="error">
+			<p>
+				<% @user_session.errors.keys.each do |key| %>
+					<%= (key.to_s.humanize + " ") unless key == :base %>
+					<%=  @user_session.errors[key].first %>
+				<% end %>
+			</p>
+		</div>
+	<% end %>
+	<% if flash[:notice] %>
+		<div style="padding-left: 10px;color: green">
+			<p><%= flash[:notice] %></p>
+		</div>
+	<% end %>
+    <table>
+		<tr>
+			<th>管理员帐号:</th>
+			<td>
+				<%= f.text_field :login, :class => "easyui-validatebox" %>
+			</td>
+		</tr>
+		<tr>
+			<th>管理员密码:</th>
+			<td>
+				<%= f.password_field :password, :class => "easyui-validatebox" %>
+			</td>
+		</tr>
+	</table>
+<% end %>

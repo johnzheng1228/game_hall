@@ -1,0 +1,23 @@
+<div class="easyui-panel">
+  <div style="padding:10px 0 10px 60px">
+    <%= form_for @app,:html=>{:id=>"submitFrm",:multipart => true } do |f| %>
+    <div id="error_explanation" style="color: red">
+      <span></span>
+    </div>
+    <table>
+      <tr>
+        <td>应用名称：</td>
+        <td><%= f.text_field :name,:id=>"name" %></td>
+      </tr>
+      <tr>
+        <td>应用图标：</td>
+        <td><%= f.file_field :icon %></td>
+      </tr>
+      <tr>
+        <td>应用地址：</td>
+        <td><%= f.file_field :url %></td>
+      </tr>
+    </table>
+    <% end %>
+  </div>
+</div>

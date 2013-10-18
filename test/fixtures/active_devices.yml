@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  device: MyString
+  serail: MyString
+
+two:
+  device: MyString
+  serail: MyString
